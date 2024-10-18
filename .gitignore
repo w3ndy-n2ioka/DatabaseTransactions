@@ -162,3 +162,5 @@ cython_debug/
 #.idea/
 
 /container-volumes/mysql/var-lib-mysql
+/container-volumes/mariadb/var-lib-mysql
+/container-volumes/postgresql/var-lib-postgresql-data
