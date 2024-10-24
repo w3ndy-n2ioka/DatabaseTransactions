@@ -1,10 +1,10 @@
-# BBT3104-Lab1of6-DatabaseTransactions
+# MCS8104-Lab2-DatabaseTransactions
 
 
 | **Key**                                                               | Value                                                                                                                                                                              |
 |---------------|---------------------------------------------------------|
 | **Group Name**                                                               | ? |
-| **Semester Duration**                                                 | 19<sup>th</sup> August - 25<sup>th</sup> November 2024                                                                                                                       |
+| **Semester Duration**                                                 | 3<sup>rd</sup> September - 29<sup>th</sup> November 2024                                                                                                                       |
 
 ## Flowchart
 
