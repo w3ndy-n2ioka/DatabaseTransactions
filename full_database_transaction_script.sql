@@ -1,5 +1,3 @@
--- Docker Command: docker exec -it mysql-8.3.0-bbt3104 mysql -u root -p
--- Browser URL (phpMyAdmin): http://localhost:8080/
 USE classicmodels;
 
 START TRANSACTION;
