@@ -46,6 +46,7 @@ SET @quantityInStock = (SELECT quantityInStock FROM products WHERE `productCode`
 
 UPDATE `products` SET `quantityInStock` = @quantityInStock - 68 WHERE `productCode` = 'S12_1099';
 
+-- NOTE: The check number should be unique for subsequent payments
 INSERT INTO payments
 (customerNumber, checkNumber, paymentDate, amount)
 VALUES (145, 'JM555210', DATE(NOW()), 12000);
