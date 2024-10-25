@@ -1,4 +1,4 @@
-# MCS8104-Lab2-DatabaseTransactions
+# MCS8104: Lab2 - DatabaseTransactions
 
 
 | **Key**                                                               | Value                                                                                                                                                                              |
