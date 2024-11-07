@@ -3,7 +3,7 @@
 
 | **Key**                                                               | Value                                                                                                                                                                              |
 |---------------|---------------------------------------------------------|
-| **Group Name**                                                               | ? |
+| **Group Name**                                                               | Group 1 |
 | **Semester Duration**                                                 | 3<sup>rd</sup> September - 29<sup>th</sup> November 2024                                                                                                                       |
 
 ## Flowchart
