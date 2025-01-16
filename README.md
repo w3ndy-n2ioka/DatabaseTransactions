@@ -17,4 +17,4 @@ Please refer to the Lab Manual provided on Google Classroom for instructions.
 
 ## Technology Stack and Process Flow
 
-![image](https://github.com/user-attachments/assets/797f5030-b38e-4855-bd44-f5d9d475200f)
+![image](https://github.com/user-attachments/assets/ce8253a7-97ec-4704-bde5-0742efba58cd)
