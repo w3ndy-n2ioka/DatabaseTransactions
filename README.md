@@ -15,6 +15,6 @@ Please refer to the Lab Manual provided on Google Classroom for instructions.
 ![image](https://github.com/user-attachments/assets/183f8310-887a-42f4-b712-80d41a8b85fe)
 ![image](https://github.com/user-attachments/assets/1a43b2a9-bd54-4689-a9d6-802f44f0bbaf)
 
-## Technology Stack
+## Technology Stack and Process Flow
 
 ![image](https://github.com/user-attachments/assets/797f5030-b38e-4855-bd44-f5d9d475200f)
