@@ -1,4 +1,4 @@
-# [DAT2201] Lab2: Database Transactions
+# Lab2: Database Transactions
 
 | **Key**| Value |
 |---------------|---------------------------------------------------------|
