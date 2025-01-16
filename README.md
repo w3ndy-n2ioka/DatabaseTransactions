@@ -16,3 +16,5 @@ Please refer to the Lab Manual provided on Google Classroom for instructions.
 ![image](https://github.com/user-attachments/assets/1a43b2a9-bd54-4689-a9d6-802f44f0bbaf)
 
 ## Technology Stack
+
+![image](https://github.com/user-attachments/assets/797f5030-b38e-4855-bd44-f5d9d475200f)
