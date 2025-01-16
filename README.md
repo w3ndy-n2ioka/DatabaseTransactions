@@ -1,17 +1,12 @@
-# MCS8104: Lab2 - DatabaseTransactions
+# [DAT2201] Lab2: Database Transactions
 
-
-| **Key**                                                               | Value                                                                                                                                                                              |
+| **Key**| Value |
 |---------------|---------------------------------------------------------|
-| **Group Name**                                                               | ? |
-| **Semester Duration**                                                 | 3<sup>rd</sup> September - 29<sup>th</sup> November 2024                                                                                                                       |
+| **Group Name**| ? |
+| **Semester Duration**| 18<sup>th</sup> November - 1<sup>st</sup> March 2024 |
 
-## Flowchart
+## Lab Manual
 
-## Pseudocode
+Please refer to the Lab Manual provided on Google Classroom for instructions.
 
-``` sql
-Type your pseudocode here
-```
-
-## Support for the Sales Departments' Report
+## Main Concept

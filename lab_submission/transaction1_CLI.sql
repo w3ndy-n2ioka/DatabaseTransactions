@@ -1,0 +1,2 @@
+-- Use the MySQL CLI client to represent Transaction 1 (the one that changes 
+-- the data and is later aborted)

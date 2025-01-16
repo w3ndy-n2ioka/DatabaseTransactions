@@ -34,20 +34,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Insert into orderdetails for product 1
         $conn->query("INSERT INTO orderdetails(orderNumber, productCode, quantityOrdered, priceEach, orderLineNumber)
-                      VALUES($orderNumber, 'S18_1749', 2724, '136', 1)");
+                      VALUES($orderNumber, 'S18_1749', 2, '136', 1)");
 
         // Update product quantity for product 1
-        $conn->query("UPDATE products SET quantityInStock = quantityInStock - 2724 WHERE productCode = 'S18_1749'");
+        $conn->query("UPDATE products SET quantityInStock = quantityInStock - 2 WHERE productCode = 'S18_1749'");
 
         // Savepoint before_product_2
         $conn->query("SAVEPOINT before_product_2");
 
         // Insert into orderdetails for product 2
         $conn->query("INSERT INTO orderdetails(orderNumber, productCode, quantityOrdered, priceEach, orderLineNumber)
-                      VALUES($orderNumber, 'S18_2248', 540, '55.09', 2)");
+                      VALUES($orderNumber, 'S18_2248', 2, '55.09', 2)");
 
         // Update product quantity for product 2
-        $conn->query("UPDATE products SET quantityInStock = quantityInStock - 540 WHERE productCode = 'S18_2248'");
+        $conn->query("UPDATE products SET quantityInStock = quantityInStock - 2 WHERE productCode = 'S18_2248'");
 
         // Rollback to savepoint before_product_2
         $conn->query("ROLLBACK TO SAVEPOINT before_product_2");
@@ -57,10 +57,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Insert into orderdetails for product 3
         $conn->query("INSERT INTO orderdetails(orderNumber, productCode, quantityOrdered, priceEach, orderLineNumber)
-                      VALUES($orderNumber, 'S12_1099', 68, '95.34', 3)");
+                      VALUES($orderNumber, 'S12_1099', 2, '95.34', 3)");
 
         // Update product quantity for product 3
-        $conn->query("UPDATE products SET quantityInStock = quantityInStock - 68 WHERE productCode = 'S12_1099'");
+        $conn->query("UPDATE products SET quantityInStock = quantityInStock - 2 WHERE productCode = 'S12_1099'");
 
         // Insert into payments
         // Generate a unique check number

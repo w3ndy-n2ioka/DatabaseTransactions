@@ -57,4 +57,14 @@ SELECT *
 FROM
 	classicmodels.orderdetails
 WHERE
-	orderNumber = 10426;
+	orderNumber = 10426
+ORDER BY orderLineNumber ASC;
+
+-- ############################
+-- To view the running transactions
+SELECT * 
+FROM information_schema.INNODB_TRX\G
+
+
+-- To kill a transaction
+KILL <trx_mysql_thread_id>;
