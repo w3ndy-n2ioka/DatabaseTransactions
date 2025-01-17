@@ -162,7 +162,7 @@ cython_debug/
 #.idea/
 
 /container-volumes/mysql/var-lib-mysql
-/container-volumes/mariadb/var-lib-mysql
+/container-volumes/mysql/var-log-mysql
 /container-volumes/postgresql/var-lib-postgresql-data
 /container-volumes/apache/etc-php/php.ini
 container-volumes/apache/etc-php/php.ini

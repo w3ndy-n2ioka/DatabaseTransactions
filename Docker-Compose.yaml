@@ -46,10 +46,10 @@ services:
       exec docker-entrypoint.sh mysqld
       "
 
-  postgres-16.2:
-    image: postgres:16.2
-    hostname: postgres-16.2-lab2
-    container_name: postgres-16.2-lab2
+  postgres-17.2:
+    image: postgres:17.2
+    hostname: postgres-17.2-lab2
+    container_name: postgres-17.2-lab2
     restart: always
     shm_size: 1g
     ports:
