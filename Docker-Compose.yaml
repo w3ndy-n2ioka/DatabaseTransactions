@@ -2,8 +2,8 @@ services:
 
   apache-php:
     image: customized-apache-httpd-plus-php:1.0
-    hostname: apache-2.4-php-8.2-mcs8104-lab2
-    container_name: apache-2.4-php-8.2-mcs8104-lab2
+    hostname: apache-2.4-php-8.2-lab2
+    container_name: apache-2.4-php-8.2-lab2
     restart: always
     ports:
       - 8002:80
@@ -22,10 +22,10 @@ services:
       apache2-foreground
       "
 
-  mysql:
+  mysql-8.0.40-debian:
     image: customized-mysql:1.0
-    hostname: mysql-8.3.0-mcs8104-lab2
-    container_name: mysql-8.3.0-mcs8104-lab2
+    hostname: mysql-8.0.40-debian-lab2
+    container_name: mysql-8.0.40-debian-lab2
     restart: always
     ports:
       - 3307:3306
@@ -34,6 +34,8 @@ services:
     volumes:
       # To store the server's configuration file in the host
       - ./container-volumes/mysql/etc-mysql/my.cnf:/etc/mysql/my.cnf
+      # To store the server's log files in the host
+      - ./container-volumes/mysql/var-log-mysql:/var/log/mysql/
       # To store the server's data persistently in the host
       - ./container-volumes/mysql/var-lib-mysql:/var/lib/mysql
       # To run the SQL scripts used to create the required databases
@@ -44,30 +46,10 @@ services:
       exec docker-entrypoint.sh mysqld
       "
 
-  mariadb:
-    image: mariadb:11.5.2
-    hostname: mariadb-11.5.2-mcs8104-lab2
-    container_name: mariadb-11.5.2-mcs8104-lab2
-    restart: always
-    ports:
-      - 3308:3306
-    environment:
-      MARIADB_ROOT_PASSWORD: 5trathm0re
-    volumes:
-      # To store the server's configuration file in the host
-      - ./container-volumes/mariadb/etc-mysql/my.cnf:/etc/mysql/my.cnf
-      # To store the server's data persistently in the host
-      - ./container-volumes/mariadb/var-lib-mysql:/var/lib/mysql
-    command: >
-      /bin/bash -c "
-      chmod 644 /etc/mysql/my.cnf &&
-      exec docker-entrypoint.sh mariadbd
-      "
-
-  postgres:
+  postgres-16.2:
     image: postgres:16.2
-    hostname: postgres-16.2-mcs8104-lab2
-    container_name: postgres-16.2-mcs8104-lab2
+    hostname: postgres-16.2-lab2
+    container_name: postgres-16.2-lab2
     restart: always
     shm_size: 1g
     ports:
