@@ -1,4 +1,4 @@
-# Lab2: Database Transactions
+# Lab: Database Transactions
 
 | **Key**| Value |
 |---------------|---------------------------------------------------------|
