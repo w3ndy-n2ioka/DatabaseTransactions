@@ -1,5 +1,5 @@
 <?php
-$servername = "mysql-8.0.40-debian-lab2";
+$servername = "mysql-8.0.40-debian";
 $username = "root";
 $password = "5trathm0re";
 $dbname = "classicmodels";
