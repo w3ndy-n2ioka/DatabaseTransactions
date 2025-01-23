@@ -33,13 +33,13 @@ services:
       MYSQL_ROOT_PASSWORD: 5trathm0re
     volumes:
       # To store the server's configuration file in the host
-      - ./container-volumes/mysql/etc-mysql/my.cnf:/etc/mysql/my.cnf
+      - mysql-config:/etc/mysql/
       # To store the server's log files in the host
-      - ./container-volumes/mysql/var-log-mysql:/var/log/mysql/
+      - mysql-log:/var/log/mysql/
       # To store the server's data persistently in the host
-      - ./container-volumes/mysql/var-lib-mysql:/var/lib/mysql
+      - mysql-data:/var/lib/mysql
       # To run the SQL scripts used to create the required databases
-      - ./container-volumes/mysql/init-scripts:/docker-entrypoint-initdb.d/
+      - mysql-init:/docker-entrypoint-initdb.d/
     command: >
       /bin/bash -c "
       chmod 644 /etc/mysql/my.cnf &&
@@ -60,8 +60,46 @@ services:
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       # To store the server's configuration files (postgresql.conf and pg_hba.conf) in the host
-      - ./container-volumes/postgresql/etc-postgresql/postgresql.conf:/etc/postgresql/postgresql.conf
-      - ./container-volumes/postgresql/etc-postgresql/pg_hba.conf:/var/lib/postgresql/data/pg_hba.conf
+      - postgres-config:/etc/postgresql/
       # To store the server's data persistently in the host
-      - ./container-volumes/postgresql/var-lib-postgresql-data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     command: postgres -c 'config_file=/etc/postgresql/postgresql.conf'
+
+volumes:
+  mysql-config:
+    driver: local # The volume will be stored locally on the host machine
+    driver_opts:
+      type: none # Binds to the path specified in "device" instead of creating a new directory/file on the host
+      o: bind # Confirms that Docker maps a directory/file on the host directly into the container
+      device: ./container-volumes/mysql/etc-mysql/
+  mysql-log:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./container-volumes/mysql/var-log-mysql
+  mysql-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./container-volumes/mysql/var-lib-mysql/
+  mysql-init:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./container-volumes/mysql/init-scripts/
+
+  postgres-config:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./container-volumes/postgresql/etc-postgresql/
+  postgres-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./container-volumes/postgresql/var-lib-postgresql-data/
