@@ -43,6 +43,8 @@ services:
     command: >
       /bin/bash -c "
       chmod 644 /etc/mysql/my.cnf &&
+      chmod 644 /etc/mysql/conf.d/docker.cnf &&
+      chmod 644 /etc/mysql/conf.d/mysql.cnf &&
       exec docker-entrypoint.sh mysqld
       "
 
