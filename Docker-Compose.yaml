@@ -63,8 +63,12 @@ services:
     volumes:
       # To store the server's configuration files (postgresql.conf and pg_hba.conf) in the host
       - postgres-config:/etc/postgresql/
+      # To store the server's log files in the host
+      - postgres-log:/var/log/postgresql/
       # To store the server's data persistently in the host
       - postgres-data:/var/lib/postgresql/data
+      # To run the SQL scripts used to create the required databases
+      - postgres-init:/docker-entrypoint-initdb.d/
     command: postgres -c 'config_file=/etc/postgresql/postgresql.conf'
 
 volumes:
@@ -99,9 +103,21 @@ volumes:
       type: none
       o: bind
       device: ./container-volumes/postgresql/etc-postgresql/
+  postgres-log:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./container-volumes/postgres/var-log-postgres
   postgres-data:
     driver: local
     driver_opts:
       type: none
       o: bind
       device: ./container-volumes/postgresql/var-lib-postgresql-data/
+  postgres-init:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./container-volumes/postgres/init-scripts/
