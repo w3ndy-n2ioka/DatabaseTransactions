@@ -161,8 +161,11 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+
+/.cspell
+
 /container-volumes/mysql/var-lib-mysql
 /container-volumes/mysql/var-log-mysql
+
 /container-volumes/postgresql/var-lib-postgresql-data
-/container-volumes/apache/etc-php/php.ini
-.cspell/custom-dictionary-workspace.txt
+/container-volumes/postgresql/var-log-postgresql

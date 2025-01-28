@@ -106,7 +106,7 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: ./container-volumes/postgres/var-log-postgres/
+      device: ./container-volumes/postgresql/var-log-postgresql/
   postgres-data:
     driver: local
     driver_opts:
@@ -118,7 +118,7 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: ./container-volumes/postgres/init-scripts/
+      device: ./container-volumes/postgresql/init-scripts/
 
   apache-httpd-www:
     driver: local
