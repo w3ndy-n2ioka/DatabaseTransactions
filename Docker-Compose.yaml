@@ -70,6 +70,7 @@ services:
     command: postgres -c 'config_file=/etc/postgresql/postgresql.conf'
 
 volumes:
+  # MySQL volumes
   mysql-config:
     driver: local # The volume will be stored locally on the host machine
     driver_opts:
@@ -95,6 +96,7 @@ volumes:
       o: bind
       device: ./container-volumes/mysql/init-scripts/
 
+  # PostgreSQL volumes
   postgres-config:
     driver: local
     driver_opts:
@@ -120,6 +122,7 @@ volumes:
       o: bind
       device: ./container-volumes/postgresql/init-scripts/
 
+  # Apache volumes
   apache-httpd-www:
     driver: local
     driver_opts:
