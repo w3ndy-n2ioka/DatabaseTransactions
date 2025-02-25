@@ -4,7 +4,7 @@ import sys
 import uuid
 
 def execute_transaction():
-    # Bonus Mark Question: Why did we use "mysql-8.3.0-mcs8104-lab2" as the servername in PHP and "localhost" as the servername in Python?
+    # Bonus Mark Question: Why did we use "mysql-8.0.40-debian" as the servername in PHP and "localhost" as the servername in Python?
     servername = "localhost"
     username = "root"
     password = "5trathm0re"
