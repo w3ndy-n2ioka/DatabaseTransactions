@@ -2,7 +2,7 @@
 
 ## Flowchart
 
-Place your flowchart "C:\Users\nziok\Gallery\flowchart_G9.png" here.
+Place your flowchart "![alt text](flowchart_G9.png)" here.
 
 ## Pseudocode
 
